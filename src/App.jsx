@@ -1,8 +1,10 @@
+import Twitter from "./components/Twitter/Twitter";
+
 function App() {
 
   return (
     <>
-      
+      <Twitter />
     </>
   )
 }
