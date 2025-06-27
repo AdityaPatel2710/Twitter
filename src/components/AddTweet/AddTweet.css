@@ -1,0 +1,48 @@
+.add-tweet-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  margin-bottom: 3.25vh;
+}
+
+.add-tweet-container input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: #253341;
+  border: 1px solid #38444d;
+  color: #e1e8ed;
+}
+
+.add-tweet-container input:focus {
+  outline: none;
+  border-color: #1da1f2;
+  box-shadow: 0 0 0 3px rgba(29,161,242,0.2);
+}
+
+.add-tweet-container button {
+  background-color: #1da1f2;
+  color: #15202b;
+  padding: 0 1.5rem;
+  border: none;
+  border-radius: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.add-tweet-container button:disabled {
+  background-color: #aab8c2;
+  cursor: not-allowed;
+}
+
+.add-tweet-container button:not(:disabled):hover {
+  background-color: #0d95e8;
+  transform: translateY(-1px);
+}
+
+.add-tweet-container input::placeholder {
+  color: #8899a6;
+}

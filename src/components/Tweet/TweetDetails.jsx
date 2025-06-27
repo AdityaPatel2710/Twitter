@@ -1,12 +1,14 @@
 import getFormattedTimestamp from "../../helpers/getFormattedTimestamp";
 
+import "./TweetDetails.css";
+
 
 function TweetDetails({ likesCount, createdAt, isEdited }) {
 
     return (
-        <div>
+        <div className="tweet-details-wrapper">
             <div className="tweet-likes-count"> {likesCount} likes </div>
-            <div> <span>{(isEdited) ? "Edited" : "Tweeted"} at </span> {getFormattedTimestamp(createdAt)} </div>
+            <div> <span className={(isEdited)?"tweet-edited":""}>{(isEdited) ? "Edited" : "Tweeted"} at </span> {getFormattedTimestamp(createdAt)} </div>
         </div>
     )
 }

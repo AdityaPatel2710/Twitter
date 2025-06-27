@@ -1,0 +1,17 @@
+.tweet-details-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #657786;
+  margin-top: 1.5vh;
+}
+
+.tweet-likes-count {
+  font-weight: bold;
+}
+
+.tweet-edited {
+  font-style: italic;
+  margin-left: 0.5rem;
+}

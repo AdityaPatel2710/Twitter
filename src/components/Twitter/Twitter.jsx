@@ -2,6 +2,8 @@ import { memo, useCallback, useState } from "react";
 import AddTweet from "../AddTweet/AddTweet";
 import TweetList from "../TweetList/TweetList";
 
+import "./Twitter.css";
+
 let dummyTweets = [
   {id: 0, content: "first tweet", likesCount: 10, createdAt: new Date(), isEdited: false},
   {id: 1, content: "second tweet", likesCount: 20, createdAt: new Date(), isEdited: false},
@@ -39,7 +41,7 @@ function Twitter() {
     
 
     return (
-        <div>
+        <div className="twitter-wrapper">
             <MemoisedAddTweet onAddTweet={handleAddTweet} />
             <TweetList tweetList={tweets} onEditTweet={handleEditTweet} />
         </div>

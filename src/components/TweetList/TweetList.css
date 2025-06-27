@@ -1,0 +1,7 @@
+.tweetlist-wrapper {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.25vh;
+  padding: 0;
+}

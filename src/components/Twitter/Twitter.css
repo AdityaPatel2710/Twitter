@@ -1,0 +1,20 @@
+.twitter-wrapper {
+  max-width: 40vw;         /* Limit width for readability */
+  margin: 5vh auto;        /* Center horizontally with some top/bottom space */
+  padding: 4vh 1vw;            /* Inner padding */
+  background: #15202b;               /* Twitter dark-blue background */
+  border: 1px solid #38444d;         /* Slightly lighter border */
+  border-radius: 1rem;      /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 3.5vh;              /* Space between AddTweet and TweetList */
+  color: #e1e8ed;                    /* Light text */
+}
+
+
+
+
+
+
+

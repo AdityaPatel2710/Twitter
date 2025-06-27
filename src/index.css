@@ -1,0 +1,21 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #f5f8fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #14171a;
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+/* Utility */
+.hidden {
+  display: none !important;
+}
+.flex {
+  display: flex;
+}

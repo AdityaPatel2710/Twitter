@@ -1,0 +1,91 @@
+.tweet-container {
+  background-color: #283a4b;
+  border: 1px solid #42505b;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: box-shadow 0.2s;
+}
+
+.tweet-container:hover {
+  box-shadow: 1px 1px 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.tweet-content {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.tweet-content input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  transition: border-color 0.2s;
+  background: #253341;
+  border: 1px solid #38444d;
+  color: #e1e8ed;
+}
+
+.tweet-content input:focus {
+  outline: none;
+  border-color: #1da1f2;
+}
+
+.tweet-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+
+.tweet-actions button:disabled {
+  color: #aab8c2;
+  cursor: not-allowed;
+}
+
+.tweet-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tweet-content,
+.tweet-details-wrapper,
+.tweet-actions button {
+  color: #e1e8ed;
+}
+
+
+.edit-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  background: linear-gradient(135deg, #1da1f2, #0d95e8);
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+}
+
+.edit-button:not(:disabled):hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  background: linear-gradient(135deg, #0d95e8, #1da1f2);
+}
+
+/* Active press down effect */
+.edit-button:not(:disabled):active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* If you add an icon inside, size it nicely */
+.edit-button .icon {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+

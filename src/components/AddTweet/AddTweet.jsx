@@ -1,13 +1,15 @@
 import { useState } from "react";
 
+import "./AddTweet.css";
+
 function AddTweet({ onAddTweet }) {
     const [text, setText] = useState("");
 
     return (
-        <div>
+        <div className="add-tweet-container">
             <input 
                 value = {text} 
-                placeholder = "Write new tweet..."
+                placeholder = "What's happening?"
                 onChange = {(Event) => setText(Event.target.value)} 
             />
             <button 
