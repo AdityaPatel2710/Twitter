@@ -1,6 +1,6 @@
 import Tweet from "../Tweet/Tweet";
 
-function TweetList({ tweetList }) {
+function TweetList({ tweetList, onEditTweet }) {
 
     return (
         <div>
@@ -8,7 +8,7 @@ function TweetList({ tweetList }) {
                 {
                     tweetList.map((tweet) => (
                         <li key = {tweet.id}>
-                            <Tweet content={tweet.content} likesCount={tweet.likesCount} />
+                            <Tweet tweetInfo={tweet} onEditTweet={onEditTweet} />
                         </li>
                     ))
                 }
