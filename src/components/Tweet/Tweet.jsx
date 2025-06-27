@@ -1,5 +1,11 @@
-import { useState } from "react";
-import getFormattedTimestamp from "../../helpers/getFormattedTimestamp";
+import { memo, useState } from "react";
+import TweetDetails from "./TweetDetails";
+
+const MemoisedTweetDetails = memo(TweetDetails);
+/**
+ * "if we don't change createdAt & isEdited" => these details will remain unchanged even when Tweet component re-renders
+ * therefore, memoizing these will be more obvious
+ */
 
 function Tweet({ tweetInfo, onEditTweet }) {
     const [isEditing, setIsEditing] = useState(false);
@@ -19,10 +25,8 @@ function Tweet({ tweetInfo, onEditTweet }) {
                     > {(isEditing) ? "Post" : "Edit"} </button>
                 </div>
             </div>
-            <div>
-                <div className="tweet-likes-count"> {tweetInfo.likesCount} likes </div>
-                <div> <span>{(tweetInfo.isEdited) ? "Edited" : "Tweeted"} at </span> {getFormattedTimestamp(tweetInfo.createdAt)} </div>
-            </div>
+            
+            <MemoisedTweetDetails likesCount={tweetInfo.likesCount} createdAt={tweetInfo.createdAt} isEdited={tweetInfo.isEdited} />
         </div>
     )
 }

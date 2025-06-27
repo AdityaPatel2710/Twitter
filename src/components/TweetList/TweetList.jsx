@@ -1,4 +1,7 @@
+import { memo } from "react";
 import Tweet from "../Tweet/Tweet";
+
+const MemoisedTweet = memo(Tweet);  // ensures that untill props don't change it doesn't re-render
 
 function TweetList({ tweetList, onEditTweet }) {
 
@@ -8,7 +11,7 @@ function TweetList({ tweetList, onEditTweet }) {
                 {
                     tweetList.map((tweet) => (
                         <li key = {tweet.id}>
-                            <Tweet tweetInfo={tweet} onEditTweet={onEditTweet} />
+                            <MemoisedTweet tweetInfo={tweet} onEditTweet={onEditTweet} />
                         </li>
                     ))
                 }

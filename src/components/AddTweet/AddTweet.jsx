@@ -17,7 +17,7 @@ function AddTweet({ onAddTweet }) {
                     onAddTweet(text);
                 }}
             > 
-                Post!! 
+                Tweet!! 
             </button>
         </div>
     )
